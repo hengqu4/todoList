@@ -4,7 +4,29 @@
 
 部署地址：https://hengqu4.github.io/todoList/
 
-
+* [todoList](#todolist)
+  * [Item列表](#item列表)
+    * [增加Item](#增加item)
+    * [删除Item](#删除item)
+    * [编辑Item](#编辑item)
+    * [完成Item](#完成item)
+  * [Item整体操作](#item整体操作)
+    * [全部完成](#全部完成)
+    * [全部取消](#全部取消)
+    * [清空列表](#清空列表)
+    * [删除已完成](#删除已完成)
+  * [Item过滤](#item过滤)
+    * [All](#all)
+    * [Completed](#completed)
+    * [Active](#active)
+  * [Item 排序](#item-排序)
+    * [时间排序](#时间排序)
+    * [事项排序](#事项排序)
+  * [Item搜索](#item搜索)
+  * [Item风格](#item风格)
+    * [超时Item](#超时item)
+    * [主题风格](#主题风格)
+    * [页面总览](#页面总览)
 
 ## Item列表
 
@@ -108,7 +130,7 @@
 
 在本例中为3、4。
 
-<img src="README.assets/image-20210626102433364.png" alt="image-20210626102433364" style="zoom:67%;" />![image-20210626102448962](README.assets/image-20210626102448962.png)
+<img src="README.assets/image-20210626102433364.png" alt="image-20210626102433364" style="zoom:67%;" />
 
 ### Active
 
@@ -140,6 +162,18 @@
 
 ![image-20210626103422402](README.assets/image-20210626103422402.png)
 
+## Item搜索
+
+在顶部操作栏输入关键字，点击右侧搜索icon
+
+<img src="README.assets/image-20210626120851016.png" alt="image-20210626120851016" style="zoom:80%;" />
+
+按下搜索按钮，出现列表结果：
+
+在本样例中，输入关键字`2`，经过匹配得到的Item有`22`、`1123`、`2`，结果正确。
+
+<img src="README.assets/image-20210626120832570.png" alt="image-20210626120832570" style="zoom:80%;" />
+
 ## Item风格
 
 ### 超时Item
@@ -163,4 +197,30 @@
 点击蓝色主题，页面将切换为蓝色主调。
 
 ![image-20210626104146604](README.assets/image-20210626104146604.png)
+
+### 页面总览
+
+<img src="README.assets/image-20210626121117627.png" alt="image-20210626121117627" style="zoom:80%;" />
+
+
+
+<img src="README.assets/image-20210626121141570.png" alt="image-20210626121141570" style="zoom:80%;" />
+
+
+
+<img src="README.assets/image-20210626121243327.png" alt="image-20210626121243327" style="zoom:80%;" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

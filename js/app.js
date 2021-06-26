@@ -1,5 +1,4 @@
-// 全局变量
-// 全局表单
+// 表单
 let itemList = [];
 let itemListStorage = [];
 // 是否全部完成
@@ -14,16 +13,28 @@ let isShowActive = true;
 let showCount = 0;
 // 当前编辑的item
 let editingItem = null;
+let searchWords = '';
 
 function $(id) {
-    return document.getElementById(id);
+  return document.getElementById(id);
 }
 
 // item重加载
 function reload() {
   itemShowList = [];
   showCount = 0;
-  for (let item of itemList) {
+  let tmpList = [];
+  // 搜索
+  if(searchWords.length>0){
+    for (let item of itemList) {
+      if(item.name.search(searchWords)!=-1){
+        tmpList.push(item);
+      }
+    }
+  }else{tmpList = itemList}
+  
+  // 计算count
+  for (let item of tmpList) {
     if(isShowComplete == true && item.isCompleted == true){
       itemShowList.push(item);
       showCount +=1;
@@ -140,7 +151,6 @@ window.onload = function() {
   }
   reload();
   // 绑定事件
-  
   $('form-submit').onclick = submitForm;
   $('form-cancel').onclick = cancelForm;
   $('complete-all-button').onclick = completeAllItem;
@@ -150,10 +160,17 @@ window.onload = function() {
   $('show-all-button').onclick = showAll;
   $('show-complete-button').onclick = showComplete;
   $('show-active-button').onclick = showActive;
+  $('search-button').onclick = searchItem;
   $('style-1').onclick = styleCheck1;
   $('style-2').onclick = styleCheck2;
   $('style-3').onclick = styleCheck3;
 };
+// 搜索栏
+function searchItem(){
+  searchWords = $('search-input').value;
+  reload();
+}
+
 // 背景风格
 function styleCheck1(){
   var root = document.querySelector(':root');
