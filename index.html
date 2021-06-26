@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>todo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+  content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <script src="js/Item.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body>
+  <div id="container">
+  <nav id="nav-top">
+    <div class="nav-row">
+      <div id="title">TodoList</div>
+    </div>
+    <div class="nav-row">
+      <div class="operation">
+        <div id="complete-all-button">√</div>
+      </div>
+      <div class="operation">
+        <img src="img/clear.svg" id="clear-button" alt="">
+      </div>
+      <div class="operation">
+        <img src="img/broom.svg" id="broom-button" alt="">
+      </div>
+      <div class="operation">
+        <div class="operation-style">
+          <button id="style-1"></button>
+          <button id="style-2"></button>
+          <button id="style-3"></button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="nav-row">
+      <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search for...">
+        <img src="img/search.svg" id="order" alt="">
+      </div>
+    </div> -->
+  </nav>
+  <div id="nav-bottom">
+    <div class="nav-row">
+      <div id="item-count"></div>
+      <div class="operation">
+        <img src="img/all.svg" id="show-all-button" alt="">
+      </div>
+      <div class="operation">
+        <img src="img/finish.svg" id="show-complete-button" alt="">
+      </div>
+      <div class="operation">
+        <img src="img/todo.svg" id="show-active-button" alt="">
+      </div>
+    </div>
+  </div>
+  
+  <div id="main">
+    <div id="add-button">Add new item +</div>
+    <div id="item-container"></div>
+  </div>
+
+  <div id="form-div" class="hidden">
+    <div id="form-container">
+      <img src="img/cancel.svg" alt="" id="form-cancel">
+      <div id="form-operation"></div>
+      <div class="form-item">
+        <label for="name">name</label>
+        <input name="name" id="name-input" />
+      </div>
+      <div class="form-item">
+        <label for="date">date</label>
+        <input type="date" name="date" id="date-input" />
+      </div>
+      <img src="img/ok.svg" alt="" id="form-submit">
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
