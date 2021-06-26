@@ -66,20 +66,6 @@
 
 ![image-20210626101455702](README.assets/image-20210626101455702.png)
 
-通过js代码判断
-
-```javascript
-function judgeCompleteAll(){
-  let flag = true;
-  for (let item of itemList) {
-    if(item.isCompleted == false){
-      flag = false;
-    }
-  }
-  return flag;
-}
-```
-
 如果item没有全部完成，按钮将表现为全部勾选完成；
 
 如果item已经全部完成，按钮将表现为全部取消。
