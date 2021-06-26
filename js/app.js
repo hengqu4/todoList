@@ -1,11 +1,18 @@
 // 全局变量
+// 全局表单
 let itemList = [];
 let itemListStorage = [];
+// 是否全部完成
 let isCompleteAll = false;
+// 展示表单
 let itemShowList = [];
+// 是否展示已完成的item
 let isShowComplete = true;
+// 是否展示进行中的item
 let isShowActive = true;
+// 展示的item数量
 let showCount = 0;
+// 当前编辑的item
 let editingItem = null;
 
 function $(id) {
@@ -150,7 +157,7 @@ window.onload = function() {
 // 背景风格
 function styleCheck1(){
   var root = document.querySelector(':root');
-  root.setAttribute('style', '--color: #ced6e0');
+  root.setAttribute('style', '--color: #7f8c8d');
 }
 function styleCheck2(){
   var root = document.querySelector(':root');
@@ -176,6 +183,7 @@ function showActive(){
   isShowActive = true;
   reload();
 }
+// 判断item是否超时
 function judgeTimeout(date){
   let flag = false;
   let now = new Date();
@@ -195,6 +203,8 @@ function judgeTimeout(date){
   }
   return flag;
 }
+
+// 判断item是否全部完成
 function judgeCompleteAll(){
   let flag = true;
   for (let item of itemList) {
@@ -204,6 +214,7 @@ function judgeCompleteAll(){
   }
   return flag;
 }
+// item全部完成
 function completeAllItem(){
   if(isCompleteAll == true){
     for (let item of itemList) {
@@ -216,10 +227,14 @@ function completeAllItem(){
   }
   reload();
 }
+
+// item全部删除
 function clearItem(){
   itemList = [];
   reload();
 }
+
+// item删除已完成
 function broomItem(){
   let tmpList = []
   for (let item of itemList) {
@@ -254,7 +269,7 @@ function deleteItem(item){
   reload();
 }
 
-// 打开表单
+// 打开item表单
 function addItem(){
   $("add-button").classList.add("clicked");
   $("form-div").classList.remove("hidden");
