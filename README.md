@@ -1,5 +1,11 @@
 # todoList
-> TodoList 代办清单-同济大学 Web Programming 期末作业。功能：1. 包含新增、删除、展现列表、全部完成/取消、删除已完成  2. 保存页面状态，刷新页面后可恢复；附加功能：1. 编辑单条 todo 2. 设置截止时间 3. 根据时间排序列出todo安排
+> TodoList 代办清单-同济大学 Web Programming 期末作业。
+> 功能：
+> 1. 包含新增、删除、展现列表、全部完成/取消、删除已完成  2. 保存页面状态，刷新页面后可恢复；
+> 附加功能：
+> 1. 编辑单条 todo 2. 设置截止时间 3. 根据时间排序列出todo安排
+
+
 ![image-20210626094808144](README.assets/image-20210626094808144.png)
 
 部署地址：https://hengqu4.github.io/todoList/
